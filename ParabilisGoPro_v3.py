@@ -37,20 +37,19 @@ def endRecording(cameraNumber):
     gp1.shutter(constants.stop)
 
 def ensureCamAlive(cameraNumber):
-    sh.wpa_cli("-i", "wlan0", "select_network", cameraNumber)
-    print(sh.wpa_cli("-i", "wlan0", "list_networks"))
-    time.sleep(2)
-    while sh.hostname('-I') == '\n':
-        print('Waiting for connection...')
-        print(sh.hostname('-I'))
-        time.sleep(1)   
-    print(sh.hostname('-I'))
+    connectToCamera(cameraNumber)
     gp1 = GoProCamera.GoPro()
-    gp1.KeppAlive()
+    try:
+        print('Attempting to send KeepAlive command...')
+        gp1.KeepAlive()
+        print('Keep Alive Sent')
+    except:
+        print('GoPro Definitely Dead or KeepAlive command DOES NOT WORK')
 
-startRecording(cam1)
-endRecording = input('Press [Enter] to End Recording: ')
-endRecording(cam1)
+#ensureCamAlive(cam1)
+#startRecording(cam1)
+#endRecording = input('Press [Enter] to End Recording: ')
+#endRecording(cam1)
 
 
     
