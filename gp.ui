@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1012</width>
+    <width>1017</width>
     <height>726</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>GoProClient</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -31,7 +31,7 @@
         <bool>true</bool>
        </property>
        <attribute name="title">
-        <string>Tab 1</string>
+        <string>GoPro Network</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_2">
         <item row="0" column="0">
@@ -66,6 +66,13 @@
              <widget class="QPushButton" name="stopRecBut">
               <property name="text">
                <string>Stop Recording</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="verifyBut">
+              <property name="text">
+               <string>Verify Connection</string>
               </property>
              </widget>
             </item>
@@ -132,6 +139,11 @@
               <string>Is Recording?</string>
              </property>
             </column>
+            <column>
+             <property name="text">
+              <string>Ping Successful</string>
+             </property>
+            </column>
            </widget>
           </item>
          </layout>
@@ -140,8 +152,21 @@
       </widget>
       <widget class="QWidget" name="tab_2">
        <attribute name="title">
-        <string>Tab 2</string>
+        <string>Live Stream</string>
        </attribute>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>300</y>
+          <width>201</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Feature not yet supported.</string>
+        </property>
+       </widget>
       </widget>
      </widget>
     </item>
