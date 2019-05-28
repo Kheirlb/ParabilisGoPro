@@ -21,6 +21,7 @@ class Window(QMainWindow, Ui_MainWindow):
 		QMainWindow.__init__(self)
 		Ui_MainWindow.__init__(self)
 		self.setupUi(self)
+		self.showMaximized()
 		self.initUI()
 
 	def initUI(self):

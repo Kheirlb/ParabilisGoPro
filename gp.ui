@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1017</width>
-    <height>726</height>
+    <height>610</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -102,7 +102,7 @@
           <item>
            <widget class="QTableWidget" name="tableWidget">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
               <horstretch>57</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
